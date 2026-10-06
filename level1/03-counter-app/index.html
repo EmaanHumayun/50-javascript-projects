@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Counter App</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <section class="counter-card">
+
+            <div class="top-section">
+
+                <div>
+                    <span class="eyebrow">JAVASCRIPT PROJECT #03</span>
+
+                    <h1>Counter App</h1>
+
+                    <p>
+                        A simple interactive counter built with JavaScript.
+                    </p>
+                </div>
+
+                <div class="icon-box">
+                    <i data-lucide="plus-minus"></i>
+                </div>
+
+            </div>
+
+
+            <div class="counter-display">
+
+                <span class="display-label">CURRENT COUNT</span>
+
+                <div id="count">0</div>
+
+            </div>
+
+
+            <div class="controls">
+
+                <button
+                    class="control decrease"
+                    onclick="decreaseCount()"
+                >
+                    <i data-lucide="minus"></i>
+                    <span>Decrease</span>
+                </button>
+
+
+                <button
+                    class="reset"
+                    onclick="resetCount()"
+                >
+                    <i data-lucide="rotate-ccw"></i>
+                    <span>Reset</span>
+                </button>
+
+
+                <button
+                    class="control increase"
+                    onclick="increaseCount()"
+                >
+                    <i data-lucide="plus"></i>
+                    <span>Increase</span>
+                </button>
+
+            </div>
+
+
+            <div class="status">
+                <span class="status-dot"></span>
+
+                <span id="statusText">
+                    Counter is ready
+                </span>
+            </div>
+
+
+            <footer>
+                Built with HTML, CSS & JavaScript
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
