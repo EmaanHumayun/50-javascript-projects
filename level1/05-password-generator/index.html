@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate secure random passwords with customizable options.">
+    <title>KeyForge | Password Generator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <section class="generator">
+            <header class="header">
+                <div class="brand">
+                    <div class="brand-icon"><i data-lucide="shield-check"></i></div>
+                    <span>KeyForge</span>
+                </div>
+                <span class="project-tag">PROJECT #05</span>
+            </header>
+
+            <div class="intro">
+                <span class="eyebrow">YOUR DIGITAL SECURITY</span>
+                <h1>Create a stronger<br><span>password.</span></h1>
+                <p>Generate a random password tailored to your security needs.</p>
+            </div>
+
+            <div class="password-box">
+                <div class="password-label">YOUR PASSWORD</div>
+                <div class="password-output">
+                    <input id="password" type="text" value="" placeholder="Click generate..." readonly aria-label="Generated password">
+                    <button id="copyBtn" class="icon-btn" title="Copy password" aria-label="Copy password">
+                        <i data-lucide="copy"></i>
+                    </button>
+                </div>
+                <div class="strength-row">
+                    <span id="strengthText">Not generated</span>
+                    <div class="strength-bars">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings">
+                <div class="setting-heading">
+                    <label for="length">Password length</label>
+                    <output id="lengthValue">16</output>
+                </div>
+                <input id="length" type="range" min="8" max="32" value="16">
+
+                <div class="options">
+                    <label class="option">
+                        <input type="checkbox" id="uppercase" checked>
+                        <span class="custom-check"><i data-lucide="check"></i></span>
+                        <span>Uppercase <small>A–Z</small></span>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" id="lowercase" checked>
+                        <span class="custom-check"><i data-lucide="check"></i></span>
+                        <span>Lowercase <small>a–z</small></span>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" id="numbers" checked>
+                        <span class="custom-check"><i data-lucide="check"></i></span>
+                        <span>Numbers <small>0–9</small></span>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" id="symbols">
+                        <span class="custom-check"><i data-lucide="check"></i></span>
+                        <span>Symbols <small>!@#$%</small></span>
+                    </label>
+                </div>
+            </div>
+
+            <button id="generateBtn" class="generate-btn">
+                <i data-lucide="refresh-cw"></i>
+                Generate password
+            </button>
+
+            <p id="message" class="message" role="status">Choose your options and generate.</p>
+
+            <footer>
+                <i data-lucide="lock-keyhole"></i>
+                Generated locally in your browser
+            </footer>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

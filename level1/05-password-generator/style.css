@@ -1,0 +1,354 @@
+css
+:root {
+    font-family: "Inter", sans-serif;
+    color: #20251f;
+    background: #f3f5ef;
+    font-synthesis: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 10% 10%, #dce9d7, transparent 40%),
+        radial-gradient(ellipse at 90% 90%, #dce5fa, transparent 38%),
+        #f6f7f3;
+}
+
+button, input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 28px 16px;
+}
+
+.generator {
+    width: min(100%, 500px);
+    padding: 32px;
+    border: 1px solid #ffffff;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.91);
+    box-shadow: 0 25px 75px #25341e16;
+    backdrop-filter: blur(18px);
+}
+
+.header, .brand, .password-output, .strength-row,
+.setting-heading, .generate-btn, footer {
+    display: flex;
+    align-items: center;
+}
+
+.header, .setting-heading, .strength-row {
+    justify-content: space-between;
+}
+
+.brand {
+    gap: 10px;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    color: white;
+    background: #263e2b;
+}
+
+.brand-icon svg {
+    width: 20px;
+}
+
+.project-tag, .eyebrow {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    color: #74816f;
+}
+
+.project-tag {
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: #edf2e9;
+}
+
+.intro {
+    margin: 34px 0 24px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: clamp(32px, 7vw, 43px);
+    letter-spacing: -2px;
+    line-height: 1.12;
+}
+
+h1 span {
+    color: #53835a;
+}
+
+.intro p {
+    margin-top: 12px;
+    max-width: 350px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #858b82;
+}
+
+.password-box {
+    padding: 19px;
+    border: 1px solid #e7eae3;
+    border-radius: 18px;
+    background: #f8faf6;
+}
+
+.password-label {
+    color: #8a9186;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.password-output {
+    gap: 10px;
+    margin: 10px 0 16px;
+}
+
+#password {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #283e2b;
+    font-size: clamp(15px, 4vw, 20px);
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+#password::placeholder {
+    color: #a5ada1;
+    font-size: 15px;
+}
+
+.icon-btn {
+    flex-shrink: 0;
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #e1e6dd;
+    border-radius: 11px;
+    color: #456b4a;
+    background: white;
+    transition: 0.2s;
+}
+
+.icon-btn:hover {
+    background: #e8f0e5;
+}
+
+.icon-btn svg {
+    width: 17px;
+}
+
+.strength-row {
+    gap: 12px;
+    padding-top: 13px;
+    border-top: 1px solid #e8ebe5;
+}
+
+#strengthText {
+    font-size: 11px;
+    font-weight: 700;
+    color: #82897e;
+}
+
+.strength-bars {
+    display: flex;
+    gap: 4px;
+}
+
+.strength-bars span {
+    width: 29px;
+    height: 4px;
+    border-radius: 8px;
+    background: #e0e4dc;
+}
+
+.strength-bars span.active {
+    background: #5a9560;
+}
+
+.settings {
+    margin: 25px 0;
+}
+
+.setting-heading {
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#lengthValue {
+    min-width: 39px;
+    padding: 6px 9px;
+    border-radius: 8px;
+    text-align: center;
+    background: #edf2e9;
+    color: #456b4a;
+    font-weight: 800;
+}
+
+#length {
+    width: 100%;
+    accent-color: #477a4e;
+    cursor: pointer;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 23px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.option input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.custom-check {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border: 1px solid #d9ded5;
+    border-radius: 6px;
+    background: white;
+    color: transparent;
+}
+
+.custom-check svg {
+    width: 13px;
+    height: 13px;
+}
+
+.option input:checked + .custom-check {
+    border-color: #477a4e;
+    background: #477a4e;
+    color: white;
+}
+
+.option input:focus-visible + .custom-check {
+    outline: 2px solid #477a4e;
+    outline-offset: 3px;
+}
+
+.option small {
+    display: block;
+    margin-top: 3px;
+    color: #9ba195;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.generate-btn {
+    width: 100%;
+    min-height: 54px;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    border-radius: 14px;
+    background: #263e2b;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    background: #35543a;
+}
+
+.generate-btn svg {
+    width: 17px;
+}
+
+.message {
+    min-height: 17px;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 11px;
+    color: #858b82;
+}
+
+.message.error {
+    color: #bd4646;
+}
+
+footer {
+    justify-content: center;
+    gap: 7px;
+    margin-top: 22px;
+    padding-top: 19px;
+    border-top: 1px solid #edf0e9;
+    color: #92998d;
+    font-size: 10px;
+}
+
+footer svg {
+    width: 14px;
+    height: 14px;
+}
+
+@media (max-width: 420px) {
+    .generator {
+        padding: 23px 19px;
+        border-radius: 23px;
+    }
+
+    .intro {
+        margin-top: 29px;
+    }
+
+    .project-tag {
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+}
