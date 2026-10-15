@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+        <header class="header">
+            <div class="logo">✓ <span>TaskFlow</span></div>
+            <p class="eyebrow">YOUR PERSONAL PRODUCTIVITY SPACE</p>
+            <h1>Make today<br><span>count.</span></h1>
+            <p class="subtitle">Small steps. Big progress.</p>
+        </header>
+
+        <section class="task-card">
+            <form id="todoForm" class="input-row">
+                <input
+                    type="text"
+                    id="todoInput"
+                    placeholder="What needs to get done?"
+                    maxlength="120"
+                    autocomplete="off"
+                >
+                <button type="submit" class="add-btn">+</button>
+            </form>
+
+            <div class="stats">
+                <span id="taskCount">0 tasks left</span>
+                <span id="progressText">0% completed</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <nav class="filters">
+                <button type="button" class="filter active" data-filter="all">All</button>
+                <button type="button" class="filter" data-filter="active">Active</button>
+                <button type="button" class="filter" data-filter="completed">Completed</button>
+            </nav>
+
+            <ul id="todoList" class="todo-list"></ul>
+
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">✦</div>
+                <h3>A fresh start</h3>
+                <p>Add a task above and make it happen.</p>
+            </div>
+
+            <footer class="card-footer">
+                <span>One thing at a time ✨</span>
+                <button type="button" id="clearCompleted" class="clear-btn">
+                    Clear completed
+                </button>
+            </footer>
+        </section>
+
+        <p class="bottom-note">BUILT WITH FOCUS & A LITTLE CODE</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
